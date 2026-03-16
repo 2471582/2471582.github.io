@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUSIC MAGASIN</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+</head>
+<body>
+
+    <header class="head">
+        <div class="headcontainer container d-flex align-items-center justify-content-center py-3">
+            <button id="btn2" class="btn border-0 fw-bold position-relative d-flex" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarlight2">
+                <img src="img/logo.png" alt="Logo">
+            </button>
+
+            <button class="btn border-0 position-relative d-flex" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarlight">
+                <span id="cart-badge" class="top-0 start-0 translate-middle badge text-dark" style="display:none;">0</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="size-6" style="width:24px" viewBox="0 0 640 640">
+                    <path d="M8 64C3.6 64 0 67.6 0 72C0 76.4 3.6 80 8 80L53.7 80C65.1 80 75 88.1 77.2 99.4L136.6 402.8C141.7 429.1 164.8 448 191.6 448L488 448C492.4 448 496 444.4 496 440C496 435.6 492.4 432 488 432L191.5 432C172.4 432 155.9 418.5 152.2 399.7L142.9 352L461.2 352C494.7 352 523.7 328.9 531.3 296.4L566.6 145.1C572.5 120 553.4 96 527.7 96L92.8 96C89 77.4 72.7 64 53.7 64L8 64zM96 112L527.7 112C543.2 112 554.6 126.4 551.1 141.5L515.8 292.7C509.9 318 487.3 336 461.3 336L139.8 336L96 112zM176 528C176 510.3 190.3 496 208 496C225.7 496 240 510.3 240 528C240 545.7 225.7 560 208 560C190.3 560 176 545.7 176 528zM256 528C256 501.5 234.5 480 208 480C181.5 480 160 501.5 160 528C160 554.5 181.5 576 208 576C234.5 576 256 554.5 256 528zM432 496C449.7 496 464 510.3 464 528C464 545.7 449.7 560 432 560C414.3 560 400 545.7 400 528C400 510.3 414.3 496 432 496zM432 576C458.5 576 480 554.5 480 528C480 501.5 458.5 480 432 480C405.5 480 384 501.5 384 528C384 554.5 405.5 576 432 576z"/>
+                </svg>
+            </button>
+        </div>
+        <h1 class="text-center">MUSIC MAGASIN</h1>
+        <h2 class="text-center sub">A one-stop shop for artists</h2>
+
+        <div class="offcanvas offcanvas-start text-bg-light" tabindex="-1" id="offcanvasNavbarlight2">
+            <div class="offcanvas-header">
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body d-flex flex-column">
+                <nav class="mainnav container text-left">
+                    <ul id="gender" class="list-unstyled mb-2"></ul>
+                </nav>
+                <button onclick="window.location.href='about.html'" id="about" class="btn btn-dark text-dark">About Us</button>
+            </div>
+        </div>
+
+        <div class="offcanvas offcanvas-end text-bg-light" tabindex="-1" id="offcanvasNavbarlight">
+            <div class="offcanvas-header">
+                <h3 class="offcanvas-title h5">Your Cart</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body d-flex flex-column">
+                <ul id="cart-items-list" class="list-group mb-3 flex-grow-1">
+                    <li class="list-group-item text-center text-muted empty-msg">Cart is empty</li>
+                </ul>
+                <div class="mt-auto border-top pt-3">
+                    <div class="d-flex justify-content-between fw-bold fs-5">
+                        <span>Total:</span>
+                        <span id="cart-total-price">$0.00</span>
+                    </div>
+                    <div class="checkoutbtns d-flex gap-2">
+                        <button id="Clear" class="btn btn-dark w-100 mt-3 text-light">Clear</button>
+                        <button onclick="window.location.href='checkout.html'" class="btn btn-dark w-100 mt-3 text-light">Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main mt-4">
+        <div class="container">
+            <div id="itemlist" class="row text-center g-3"></div>
+        </div>
+    </main>
+
+    <footer class="foot">
+        <ul class="list-unstyled d-flex justify-content-center mb-0">
+            <li><a href="#" class="text-decoration-none menu-elements" data-bs-toggle="modal" data-bs-target="#exampleModal3">Contact</a></li>
+            <li><a href="https://www.gnu.org/licenses/gpl-3.0.en.html#license-text" class="text-decoration-none menu-elements">Terms</a></li>
+            <li><a href="privacy.html" class="text-decoration-none menu-elements">Privacy</a></li>
+        </ul>
+    </footer>
+    <div class="fleche" >
+        <img src="img/retourHaut.png" id="retourHaut" alt="">
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="modal-product-title">Product Name</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="img/placeholder.png" alt="Product" id="modal-image" class="img-fluid mb-3" style="max-height: 300px;">
+                    <h4 id="modal-product-price" class="fw-bold">$0.00</h4>
+                    <p id="modal-product-description" class="text-center mb-1"></p>
+                    <p class="text-muted" id="modal-product-code">Code: --</p>
+                    <button id="add-to-cart-btn" class="btn btn-dark w-100">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <div class="modal fade" id="exampleModal3" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-custom-width text-center">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLabel3">Contact Us</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container about contmod">
+                        <div class="row about justify-content-center">
+                            <div class="col-md-8 about">
+                                <div class="row mb-5 nyc">
+                                    <div class="col-md-4 textwdth">
+                                        <h3 class="thin-heading mb-4">Ottawa</h3>
+                                        <p>111 Wellington St, Ottawa, ON K1A 0A4</p>
+                                    </div>
+                                    <div class="col-md-6 text-center textwdth">
+                                        <h3 class="thin-heading mb-4">Contact Info</h3>
+                                        <p>T: +1 (866)-599-4999 <br> E: info@parl.ca</p>
+                                    </div>
+                                </div>
+                                <div class="row justify-content-center">
+                                    <div class="col-md-12 textwdth">
+                                        <h3 class="thin-heading mb-4">Message Us</h3>
+                                        <form class="mb-5" id="contactForm" name="contactForm" >
+                                            <div class="row">
+                                                <div class="col-md-6 form-group textwdth">
+                                                    <input type="text" required class="form-control" name="name" id="name" placeholder="Your name">
+                                                </div>
+                                                <div class="col-md-6 form-group textwdth">
+                                                    <input type="email" required class="form-control" name="email" id="email" placeholder="Email">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12 form-group textwdth">
+                                                    <textarea class="form-control" required name="message" id="message" cols="30" rows="2" placeholder="Write your message"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12 textwdth">
+                                                    <input type="submit" value="Send Message" class="btn btn-primary rounded-0 py-2 px-4">
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <div id="form-message-warning"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

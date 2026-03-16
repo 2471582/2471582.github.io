@@ -1,0 +1,11 @@
+{
+    "img-1": { "name": "CD", "code": "custom-cd", "price": 85.00, "description": "CUSTOM CD DESIGN ON DEMAND.\n!!! AFTER PURCHASING CONTACT US !!!", "filter": "MUSIC RECORDS" },
+    "img-2": { "name": "VINYL", "code": "custom-vinyl", "price": 120.00, "description": "CUSTOM VINYL DESIGN ON DEMAND.\n!!! AFTER PURCHASING CONTACT US !!!", "filter": "MUSIC RECORDS" },
+    "img-3": { "name": "GUITAR", "code": "custom-guitar", "price": 300.00, "description": "CUSTOM GUITAR DESIGN ON DEMAND.\n!!! AFTER PURCHASING CONTACT US !!!", "filter": "OTHERS MUSIC" },
+    "img-4": { "name": "POSTER", "code": "custom-poster", "price": 40.00, "description": "CUSTOM POSTER DESIGN ON DEMAND.\n!!! AFTER PURCHASING CONTACT US !!!", "filter": "MUSIC" },
+    "img-5": { "name": "TIKTOK PROMO", "code": "promotion-tiktok", "price": 340.00, "description": "TIKTOK MUSIC PROMOTION", "filter": "MUSIC PROMO" },
+    "img-6": { "name": "INSTAGRAM PROMO", "code": "promotion-insta", "price": 200.00, "description": "INSTAGRAM MUSIC PROMOTION.\nINCLUDE INSTAGRAM LINK DURING CHECKOUT.", "filter": "MUSIC PROMO" },
+    "img-7": { "name": "YOUTUBE PROMO", "code": "promotion-youtube", "price": 120.00, "description": "YOUTUBE MUSIC PROMOTION.\nINCLUDE YOUTUBE LINK DURING CHECKOUT.", "filter": "MUSIC PROMO" },
+    "img-8": { "name": "CUSTOM WEBSITE", "code": "custom-website", "price": 300.00, "description": "INCLUDES DESIGN AND WEBSITE SOURCE CODE\n!!! AFTER PURCHASING CONTACT US !!!", "filter": "OTHERS SITE" },
+    "img-9": { "name": "CUSTOM SPEAKERS", "code": "custom-speakers", "price": 300.00, "description": "CUSTOMIZE YOUR SPEAKERS FOR YOUR NEXT SHOW.\n!!! AFTER PURCHASING CONTACT US !!!", "filter": "OTHERS MUSIC" }
+}
